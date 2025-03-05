@@ -1,16 +1,62 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes Demo</title>
+    <style>
+        /* Set background color using :root */
+        :root {
+            background-color: rgb(135, 206, 235);
+        }
+
+        /* Article paragraph styles */
+        article p:first-child {
+            background-color: black;
+            color: white;
+        }
+
+        article p:nth-child(2) {
+            color: inherit; /* Standard text color */
+        }
+
+        article p:last-child {
+            color: red;
+        }
+
+        /* Unordered list styles */
+        ul li {
+            width: 50%;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: white;
+        }
+
+        ul li:first-child, ul li:last-child {
+            font-size: 22px;
+        }
+
+        ul li:nth-last-child(3) {
+            background-color: pink;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <article>
+        <p>First paragraph - white text on black background.</p>
+        <p>Second paragraph - standard text color.</p>
+        <p>Third paragraph - red text.</p>
+    </article>
 
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
 </body>
-
 </html>
